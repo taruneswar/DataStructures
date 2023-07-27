@@ -3,16 +3,17 @@ package utils;
 import java.util.*;
 
 public class functions {
-    node head;
+    public node head;
     public void add_node(node n){
         if(head==null){
             head=n;
             return;
         }else{
-            while(head.next!=null){
-                head=head.next;
+            node current=head;
+            while(current.next!=null){
+                current=current.next;
             }
-            head.next=n;
+            current.next=n;
         }
     }
     public void printnode(){
